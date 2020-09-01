@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,10 +13,15 @@
     "url": "git+https://github.com/vjrodriguez/hello-pup.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Vicky Rodriguez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/vjrodriguez/hello-pup/issues"
   },
-  "homepage": "https://github.com/vjrodriguez/hello-pup#readme"
+  "homepage": "https://github.com/vjrodriguez/hello-pup#readme",
+  "devDependencies": {
+    "eslint": "^7.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "prettier": "^2.1.1"
+  }
 }
