@@ -1,0 +1,20 @@
+{
+  "name": "hello-pup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vjrodriguez/hello-pup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vjrodriguez/hello-pup/issues"
+  },
+  "homepage": "https://github.com/vjrodriguez/hello-pup#readme"
+}
