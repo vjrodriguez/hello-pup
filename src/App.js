@@ -17,7 +17,7 @@ const App = () => {
     }),
     React.createElement(Pet, {
       name: "Josie",
-      animal: "D og",
+      animal: "Dog",
       breed: "Mixed",
     }),
   ]);
