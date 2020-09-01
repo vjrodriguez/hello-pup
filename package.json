@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "dev": "parcel src/index.html",
+    "format": "prettier \"src/**/*.{js,html}\" --write",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,9 +21,15 @@
   },
   "homepage": "https://github.com/vjrodriguez/hello-pup#readme",
   "devDependencies": {
+    "@babel/core": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
     "eslint": "^7.8.0",
     "eslint-config-prettier": "^6.11.0",
     "parcel-bundler": "^1.12.4",
     "prettier": "^2.1.1"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
