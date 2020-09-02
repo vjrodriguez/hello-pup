@@ -1,6 +1,7 @@
-import React from 'react'
-import { render } from 'react-dom'
-import pet from '@frontendmasters/pet'
+import React from "react";
+import { render } from "react-dom";
+import pet from "@frontendmasters/pet";
+import Carousel from "./Carousel";
 
 class Details extends React.Component {
   state = { loading: true };
@@ -11,16 +12,14 @@ class Details extends React.Component {
         this.setState({
           name: animal.name,
           animal: animal.type,
-          location: `${animal.contact.address.city}, ${
-            animal.contact.address.state
-          }`,
+          location: `${animal.contact.address.city}, ${animal.contact.address.state}`,
           description: animal.description,
           media: animal.photos,
           breed: animal.breeds.primary,
-          loading: false
+          loading: false,
         });
       })
-      .catch(err => this.setState({ error: err }));
+      .catch((err) => this.setState({ error: err }));
   }
   render() {
     if (this.state.loading) {
@@ -31,6 +30,7 @@ class Details extends React.Component {
 
     return (
       <div className="details">
+        <Carousel media={media} />
         <div>
           <h1>{name}</h1>
           <h2>{`${animal} — ${breed} — ${location}`}</h2>
@@ -42,4 +42,4 @@ class Details extends React.Component {
   }
 }
 
-export default Details
+export default Details;
