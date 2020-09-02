@@ -5,6 +5,7 @@ import SearchParams from './SearchParams'
 
 const App = () => {
   return (
+    <React.StrictMode>
     <div>
       <h1>Adopt Me!</h1>
       <SearchParams />
@@ -12,6 +13,7 @@ const App = () => {
       <Pet name="Bailey" animal="Dog" breed="Terrier Mix" />
       <Pet name="Joise" animal="Dog" breed="Pitbull Mix" /> */}
     </div>
+    </React.StrictMode>
   )
   }
 
