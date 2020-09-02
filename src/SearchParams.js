@@ -10,7 +10,7 @@ const SearchParams = () => {
   const [animal, AnimalDropdown] = useDropdown("Animal", "Dog", ANIMALS)
   const [breed, BreedDropdown, setBreed] = useDropdown("Breed", "", breeds)
   const[pets, setPets] = useState([])
-  const [theme] = useContext(ThemeContext)
+  const [theme, setTheme] = useContext(ThemeContext)
 
   async function requestPets(){
     const {animals} = await pet.animals({
