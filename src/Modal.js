@@ -14,7 +14,7 @@ const Modal = ({ children }) => {
 
     //run this when modal root gets closed
     return () => modalRoot.removeChild(elRef.current);
-  }, []);
+  }, []); //using the empty array to run only once
 
   return createPortal(<div>{children}</div>, elRef.current);
 };
