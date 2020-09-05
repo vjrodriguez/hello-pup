@@ -2,9 +2,11 @@ import React, {useState} from "react";
 import ReactDOM from "react-dom";
 import Pet from "./Pet";
 import SearchParams from "./SearchParams";
-import { Router, Link } from "@reach/router";
+import { Router } from "@reach/router";
 import Details from './Details'
 import ThemeContext from './ThemeContext'
+import NavBar from "./NavBar";
+
 
 const App = () => {
   const themeHook = useState("28334AFF")
@@ -12,9 +14,8 @@ const App = () => {
     <React.StrictMode>
       <ThemeContext.Provider value={themeHook}>
       <div>
-        <header>
-        <Link to="/">Adopt Me!</Link>
-        </header>
+        <NavBar />
+        {/* <Link to="/">Adopt Me!</Link> */}
         <Router>
           <SearchParams path="/" />
           <Details path="/details/:id" />
