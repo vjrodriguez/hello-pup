@@ -34,6 +34,11 @@ const NavBar = () => (
         display: inline-block;
         animation: 2s ${Spin} linear infinite;
         font-size: 50px;
+        &:hover {
+          /* text-decoration: underline; */
+          animation: 1s ${Spin} linear infinite reverse;
+          /* transform: scale(1.5)  */
+        }
       `}
       aria-label="logo"
       role="img"
