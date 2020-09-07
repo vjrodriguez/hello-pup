@@ -1,5 +1,5 @@
 import React, {useState, lazy, Suspense} from "react";
-import Pet from "./Pet";
+//import Pet from "./Pet";
 import { Router } from "@reach/router";
 import ThemeContext from './ThemeContext'
 import NavBar from "./NavBar";
