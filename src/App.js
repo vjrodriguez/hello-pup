@@ -1,8 +1,9 @@
-import React, {useState, lazy, Suspense} from "react";
+import React, {lazy, Suspense} from "react";
 import Pet from "./Pet";
 import { Router } from "@reach/router";
-import ThemeContext from './ThemeContext'
 import NavBar from "./NavBar";
+import {Provider} from "react-redux"
+import store from "./store"
 
 const Details = lazy(() => import("./Details"))
 const SearchParams = lazy(() => import("./SearchParams"))
@@ -11,7 +12,7 @@ const App = () => {
   const themeHook = useState("28334AFF")
   return (
     <React.StrictMode>
-      <ThemeContext.Provider value={themeHook}>
+      <Provider store={store}>
       <div>
         <NavBar />
         {/* <Link to="/">Adopt Me!</Link> */}
@@ -22,7 +23,7 @@ const App = () => {
           </Router>
         </Suspense>
       </div>
-      </ThemeContext.Provider>
+      </Provider>
     </React.StrictMode>
   );
 };
