@@ -8,9 +8,9 @@ import changeTheme from "./actionCreators/changeTheme"
 
 const SearchParams = ({ theme, location, setTheme, updateLocation}) => {
   const [breeds, setBreeds] = useState([]);
+  const [pets, setPets] = useState([]);
   const [animal, AnimalDropdown] = useDropdown("Animal", "Dog", ANIMALS);
   const [breed, BreedDropdown, setBreed] = useDropdown("Breed", "", breeds);
-  const [pets, setPets] = useState([]);
 
   async function requestPets() {
     const { animals } = await pet.animals({
@@ -67,7 +67,7 @@ const SearchParams = ({ theme, location, setTheme, updateLocation}) => {
         </label>
         <button style={{ backgroundColor: theme }}>Submit</button>
       </form>
-      <Results pets={pets} />
+      <Results pets ={pets} />
     </div>
   );
 };

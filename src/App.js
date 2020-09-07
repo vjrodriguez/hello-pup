@@ -1,5 +1,5 @@
 import React, {lazy, Suspense} from "react";
-import Pet from "./Pet";
+// import Pet from "./Pet";
 import { Router } from "@reach/router";
 import NavBar from "./NavBar";
 import {Provider} from "react-redux"
@@ -9,7 +9,7 @@ const Details = lazy(() => import("./Details"))
 const SearchParams = lazy(() => import("./SearchParams"))
 
 const App = () => {
-  const themeHook = useState("28334AFF")
+  // const themeHook = useState("28334AFF")
   return (
     <React.StrictMode>
       <Provider store={store}>
