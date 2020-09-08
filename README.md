@@ -6,7 +6,7 @@ To run this app: <br />
 + npm install
 + npm run dev
 
-Special Note: <br />
+Special Notes: <br />
 + To see this app written in TypeScript, check out the TypeScript branch
 + The Redux branch is a work in progress
 + the Jest testing is a work in progress
