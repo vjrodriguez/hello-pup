@@ -7,6 +7,6 @@ To run this app: <br />
 + npm run dev
 
 Special Notes: <br />
-+ To see this app in TypeScript, check out the TypeScript branch
-+ The Redux branch is a work in progress
++ to see this app in TypeScript, check out the TypeScript branch
++ the Redux branch is a work in progress
 + the Jest testing is a work in progress
