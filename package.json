@@ -8,7 +8,8 @@
     "dev:mock": "cross-env PET_MOCK=mock npm run dev",
     "format": "prettier \"src/**/*.{js,html}\" --write",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:update": "jest -u",
     "build": "parcel build --public-url ./dist/ src/index.html",
     "start": "npm -s run build && babel-node server/index.js"
   },
@@ -28,6 +29,7 @@
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
+    "@testing-library/react": "^11.0.2",
     "@types/reach__router": "^1.3.5",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
@@ -40,6 +42,7 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
+    "jest": "^26.4.2",
     "parcel-bundler": "^1.12.4",
     "prettier": "^2.1.1",
     "typescript": "^4.0.2"

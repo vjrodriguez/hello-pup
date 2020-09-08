@@ -12,13 +12,16 @@ const SearchParams = () => {
   const [pets, setPets] = useState([]);
   const [theme, setTheme] = useContext(ThemeContext);
 
-  async function requestPets() {
-    const { animals } = await pet.animals({
-      location,
-      breed,
-      type: animal,
-    });
-    setPets(animals || []);
+  function requestPets() {
+    pet
+      .animals({
+        location,
+        breed,
+        type: animal
+      })
+      .then(({ animals }) => {
+        setPets(animals || []);
+      });
   }
 
   //renders first before useEffect runs, doesn't slow down the first render
@@ -29,6 +32,7 @@ const SearchParams = () => {
     pet.breeds(animal).then(({ breeds }) => {
       const breedStrings = breeds.map(({ name }) => name);
       setBreeds(breedStrings);
+    // eslint-disable-next-line no-console
     }, console.error);
   }, [animal, setBreed, setBreeds]);
   //an array of dependencies, the function will run if any of these changes

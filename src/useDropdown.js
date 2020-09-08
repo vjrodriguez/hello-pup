@@ -1,26 +1,29 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 
-//custom hook
 const useDropdown = (label, defaultState, options) => {
-const [state, setState] = useState(defaultState)
-const id = `use-dropdown-${label.replace(' ', '').toLowerCase()}`
+  const [state, updateState] = useState(defaultState);
+  const id = `use-dropdown-${label.replace(" ", "").toLowerCase()}`;
+  const Dropdown = () => (
+    <label htmlFor={id}>
+      {label}
+      <select
+        id={id}
+        data-testid={id}
+        value={state}
+        onChange={e => updateState(e.target.value)}
+        onBlur={e => updateState(e.target.value)}
+        disabled={!options.length}
+      >
+        <option />
+        {options.map(item => (
+          <option key={item} value={item}>
+            {item}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+  return [state, Dropdown, updateState];
+};
 
-const Dropdown = () => (
-  <label htmlFor={id}>
-    {label}
-    <select if={id} value={state}
-    onChange={evt => setState(evt.target.value)}
-    onBlur={evt => setState(evt.target.value)}
-    disabled={!options.length}
-    >
-      <option>All</option>
-      {options.map(item => (
-        <option key={item} value={item}>{item}</option>
-      ))}
-    </select>
-  </label>
-)
-return [state, Dropdown, setState]
-}
-
-export default useDropdown
+export default useDropdown;
